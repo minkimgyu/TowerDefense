@@ -60,7 +60,7 @@ public class SearchAreaComponent
             for (int i = 0; i < node.NearNodes.Count; i++)
             {
                 if (node.NearNodes[i] == null) continue;
-                if (node.NearNodes[i].CurrentState == Node.State.Block) continue;
+                //if (node.NearNodes[i].CurrentState == Node.State.Block) continue;
                 if (_visited.Contains(node.NearNodes[i]) == true) continue;
 
                 isEmpty = _gridComponent.IsEmptyArea(node.NearNodes[i].Index, areaData);

@@ -36,13 +36,14 @@ namespace Player
         {
             if (_selectComponent.Select(out Vector2Int idx))
             {
-                if (idx == _storedIdx) return; // 이전에 선택한 위치와 같다면 무시
-
-                Vector2Int resultIdx;
-                if (_searchAreaComponent.FindEmptyArea(idx, _storedAreaData, out resultIdx))
+                if (idx != _storedIdx)// 이전에 선택한 위치와 같다면 무시
                 {
-                    _areaSelector.Move(resultIdx);
-                    _storedIdx = resultIdx;
+                    Vector2Int resultIdx;
+                    if (_searchAreaComponent.FindEmptyArea(idx, _storedAreaData, out resultIdx))
+                    {
+                        _areaSelector.Move(resultIdx);
+                        _storedIdx = resultIdx;
+                    }
                 }
             }
 

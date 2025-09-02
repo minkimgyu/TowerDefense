@@ -102,7 +102,7 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "PlayerController")
         {
             Vector3 dir = other.transform.position - transform.position;
             //Vector3 knockBackPos = other.transform.position * (-dir.normalized * knockBack);

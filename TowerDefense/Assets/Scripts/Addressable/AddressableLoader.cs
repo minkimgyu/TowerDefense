@@ -12,29 +12,9 @@ public class AddressableLoader : MonoBehaviour
 {
     public enum Label
     {
-        Dot,
-        Effect,
-        ModeTitle,
-
-        ArtData,
-        ArtSprite,
-
-        ArtworkFrame,
-
-        RectProfileIcon,
-        CircleProfileIcon,
-
-        RankBadgeIcon,
-        RankDecorationIcon,
-        StageRankIcon,
-
+        CardJsonData,
+        CardIconSprite,
         SpawnableUI,
-
-        ArtworkData,
-        LocalizationData,
-        ChallengeModeStageData,
-        ColorPaletteData,
-
         Sound,
     }
 
@@ -54,23 +34,23 @@ public class AddressableLoader : MonoBehaviour
         _assetLoaders = new HashSet<BaseLoader>();
     }
 
-    public void AddProgressEvent(Action<float> OnProgress)
+    public void InjectProgressEvent(Action<float> OnProgress)
     {
         this.OnProgress = OnProgress;
     }
 
+    public Dictionary<CardData.Name, CardData> CardDataAssets { get; private set; }
+    public Dictionary<ISoundPlayable.SoundName, AudioClip> SoundAssets { get; private set; }
     //public Dictionary<Effect.Name, Effect> EffectAssets { get; private set; }
-    //public Dictionary<SpawnableUI.Name, SpawnableUI> SpawnableUIAssets { get; private set; }
-    //public Dictionary<ISoundPlayable.SoundName, AudioClip> SoundAssets { get; private set; }
+    public Dictionary<ISpawnableUI.Name, ISpawnableUI> SpawnableUIAssets { get; private set; }
+    public Dictionary<CardData.Name, Sprite> CardIconSprites { get; private set; }
 
 
     public void Load(Action OnCompleted)
     {
-        //_assetLoaders.Add(new EffectAssetLoader(Label.Effect, (value, label) => { EffectAssets = value; OnSuccess(label); }));
-
-        //_assetLoaders.Add(new SoundAssetLoader(Label.Sound, (value, label) => { SoundAssets = value; OnSuccess(label); }));
-
-        //_assetLoaders.Add(new SpawnableUIAssetLoader(Label.SpawnableUI, (value, label) => { SpawnableUIAssets = value; OnSuccess(label); }));
+        _assetLoaders.Add(new CardDataAssetLoader(Label.CardJsonData, (value, label) => { CardDataAssets = value; OnSuccess(label); }));
+        _assetLoaders.Add(new SpawnableUIAssetLoader(Label.SpawnableUI, (value, label) => { SpawnableUIAssets = value; OnSuccess(label); }));
+        _assetLoaders.Add(new CardIconAssetLoader(Label.CardIconSprite, (value, label) => { CardIconSprites = value; OnSuccess(label); }));
 
         this.OnCompleted = OnCompleted;
         _totalCount = _assetLoaders.Count;

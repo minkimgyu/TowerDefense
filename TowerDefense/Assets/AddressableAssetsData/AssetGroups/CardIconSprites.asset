@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: CardIconSprites
+  m_EditorClassIdentifier: 
+  m_GroupName: CardIconSprites
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9eb4f2ec18895bd40ac76090ad529e24
+  m_SerializeEntries:
+  - m_GUID: 2ee1efa09f5393d4fa7615a18a43335e
+    m_Address: ProvocationGolemSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e1ea7d8138bffb4294bccc41995772f
+    m_Address: ProvocationWarriorSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69bcd6b1d56892b4f8494b4513bb266b
+    m_Address: BulletTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9475b2ed4c44b014dba1a2efa166f357
+    m_Address: GuidedMissileTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 967df989bf1a21441a1080d542fcded9
+    m_Address: GridMissileTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a82f1e0d6aebf2d40b40a9c7b40fe7ef
+    m_Address: ThrowTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa93c3755fbc75345bb51560ef9d673b
+    m_Address: SparkTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd840b08648a282479708675bdc7c1e6
+    m_Address: GunnerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec8c06a44b4d3944b9f3e64f5ef1631c
+    m_Address: LaserTowerSpawnCard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardIconSprite
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6756547cc8410e04ba290c3f5c070e42, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1cfd8484143945741807943164f76de2, type: 2}
+    - {fileID: 11400000, guid: 1128e35091a3fe240ad5788f0e0073a1, type: 2}

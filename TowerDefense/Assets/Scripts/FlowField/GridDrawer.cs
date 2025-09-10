@@ -79,6 +79,8 @@ namespace FlowField
 
         private void OnDrawGizmos()
         {
+#if UNITY_EDITOR
+
             if (_nodes == null) return;
 
             for (int i = 0; i < _grid.RowSize; i++)
@@ -160,6 +162,7 @@ namespace FlowField
                     }
                 }
             }
+#endif
         }
     }
 }

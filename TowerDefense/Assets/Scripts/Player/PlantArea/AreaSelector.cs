@@ -50,7 +50,7 @@ public class AreaSelector : MonoBehaviour
         }
 
         // ÇÇ¹þ ¼³Á¤
-        _pivotTransform.localPosition = new Vector3(-data.Pivot.x, 0, -data.Pivot.y);
+        _pivotTransform.localPosition = new Vector3(-data.Pivot.x, 0, data.Pivot.y);
         _pivotTransform.gameObject.SetActive(true);
     }
 }

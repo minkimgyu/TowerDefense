@@ -20,13 +20,6 @@ using System;
 //    }
 //}
 
-//public class ArtworkFrameAssetLoader : AssetLoader<NetworkService.DTO.Rank, Sprite, Sprite>
-//{
-//    public ArtworkFrameAssetLoader(AddressableLoader.Label label, Action<Dictionary<NetworkService.DTO.Rank, Sprite>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
-//    {
-//    }
-//}
-
 //public class ProfileIconAssetLoader : IntKeyAssetLoader<Sprite, Sprite>
 //{
 //    public ProfileIconAssetLoader(AddressableLoader.Label label, Action<Dictionary<int, Sprite>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
@@ -57,6 +50,12 @@ using System;
 //    protected override void LoadAsset(Sprite item) => _asset = item;
 //}
 
+public class CardIconAssetLoader : AssetLoader<CardData.Name, Sprite, Sprite>
+{
+    public CardIconAssetLoader(AddressableLoader.Label label, Action<Dictionary<CardData.Name, Sprite>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
+    {
+    }
+}
 
 abstract public class AssetLoader<Key, Value, Type> : MultipleAssetLoader<Key, Value, Type>
 {

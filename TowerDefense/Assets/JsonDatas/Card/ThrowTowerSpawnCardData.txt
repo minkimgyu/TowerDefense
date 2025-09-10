@@ -1,0 +1,1 @@
+{"$type":"CardData, Assembly-CSharp","nameToSpawn":4,"areaData":{"$type":"AreaData, Assembly-CSharp","rowSize":2,"colSize":2,"pivot":{"$type":"UnityEngine.Vector2Int, UnityEngine.CoreModule","x":0,"y":0,"magnitude":0.0,"sqrMagnitude":0}},"cardName":"투척 타워","cardDescription":"폭탄을 던져 강력한 광역 피해를 입히는 타워입니다."}

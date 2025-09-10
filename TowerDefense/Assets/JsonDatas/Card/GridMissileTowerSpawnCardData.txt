@@ -1,0 +1,1 @@
+{"$type":"CardData, Assembly-CSharp","nameToSpawn":1,"areaData":{"$type":"AreaData, Assembly-CSharp","rowSize":2,"colSize":2,"pivot":{"$type":"UnityEngine.Vector2Int, UnityEngine.CoreModule","x":0,"y":0,"magnitude":0.0,"sqrMagnitude":0}},"cardName":"미사일 포탑","cardDescription":"일정 범위에 미사일을 발사해 적을 쓸어버리는 타워입니다."}

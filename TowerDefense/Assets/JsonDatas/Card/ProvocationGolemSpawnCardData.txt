@@ -1,0 +1,1 @@
+{"$type":"CardData, Assembly-CSharp","nameToSpawn":6,"areaData":{"$type":"AreaData, Assembly-CSharp","rowSize":3,"colSize":3,"pivot":{"$type":"UnityEngine.Vector2Int, UnityEngine.CoreModule","x":1,"y":1,"magnitude":1.41421354,"sqrMagnitude":2}},"cardName":"도발 골렘","cardDescription":"적을 도발 능력을 가진 골램입니다."}

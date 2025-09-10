@@ -34,21 +34,13 @@ public class SearchAreaComponent
 
         Node startNode = null;
 
-        try
+        // 없다면 BFS 탐색 시작
+        startNode = _gridComponent.ReturnNode(idx);
+        if (startNode == null)
         {
-            // 없다면 BFS 탐색 시작
-            startNode = _gridComponent.ReturnNode(idx);
-            if (startNode == null)
-            {
-                resultIdx = Vector2Int.zero;
-                return false;
-            }
+            resultIdx = Vector2Int.zero;
+            return false;
         }
-        catch (Exception e)
-        {
-            Debug.Log(idx);
-        }
-        
 
         _queue.Enqueue(startNode);
         _visited.Add(startNode);

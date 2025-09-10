@@ -16,6 +16,17 @@ public class FSM<State>
         _states[_currentState].OnStateEnter();
     }
 
+    public void OnCardDragStart(CardData areaData)
+    {
+        _states[_currentState].OnCardDragStart(areaData);
+    }
+
+    public void OnCardDragEnd(bool canPlant)
+    {
+        _states[_currentState].OnCardDragEnd(canPlant);
+    }
+
+
     public void OnUpdate()
     {
         _states[_currentState].OnStateUpdate();
@@ -28,7 +39,7 @@ public class FSM<State>
         _states[_currentState].OnStateEnter();
     }
 
-    public void SetState(State state, AreaData areaData)
+    public void SetState(State state, CardData areaData)
     {
         _states[_currentState].OnStateExit();
         _currentState = state;

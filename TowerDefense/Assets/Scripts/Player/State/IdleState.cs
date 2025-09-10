@@ -4,13 +4,18 @@ using UnityEngine;
 
 namespace Player
 {
-    public class IdleState : BaseState<Player.State>
+    public class IdleState : BaseState<PlayerController.State>
     {
         SelectComponent _selectComponent;
 
-        public IdleState(FSM<Player.State> fsm, SelectComponent selectComponent) : base(fsm)
+        public IdleState(FSM<PlayerController.State> fsm, SelectComponent selectComponent) : base(fsm)
         {
             _selectComponent = selectComponent;
+        }
+
+        public override void OnCardDragStart(CardData areaData) 
+        {
+            _fsm.SetState(PlayerController.State.Pick, areaData);
         }
 
         public override void OnStateUpdate()
@@ -19,14 +24,10 @@ namespace Player
             {
                 if (_selectComponent.Select(out Vector2Int idx))
                 {
+                    // TODO
+                    // 유닛 정보 보는 이벤트 추가
                     Debug.Log($"Select Index: {idx}");
                 }
-            }
-
-            if(Input.GetKeyDown(KeyCode.P))
-            {
-                _fsm.SetState(Player.State.Pick, AreaData.TwoXThree);
-                return;
             }
         }
     }

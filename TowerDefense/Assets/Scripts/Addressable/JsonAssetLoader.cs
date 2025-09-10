@@ -64,36 +64,10 @@ public class MultipleJsonAssetLoader<Key, Value> : MultipleAssetLoader<Key, Valu
     }
 }
 
-public class IntMultipleJsonAssetLoader<Key, Value> : MultipleAssetLoader<Key, Value, TextAsset>
+public class CardDataAssetLoader : MultipleJsonAssetLoader<CardData.Name, CardData>
 {
-    JsonParser _parser;
-    public IntMultipleJsonAssetLoader(AddressableLoader.Label label, Action<Dictionary<Key, Value>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
+    public CardDataAssetLoader(AddressableLoader.Label label, Action<Dictionary<CardData.Name, CardData>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
     {
-        _parser = new JsonParser();
-    }
-
-    protected override void LoadAsset(IResourceLocation location, Dictionary<Key, Value> dictionary, Action OnComplete)
-    {
-        Addressables.LoadAssetAsync<TextAsset>(location).Completed +=
-        (handle) =>
-        {
-            switch (handle.Status)
-            {
-                case AsyncOperationStatus.Succeeded:
-                    Key key = (Key)(object)int.Parse(location.PrimaryKey);
-                    Value value = _parser.JsonToObject<Value>(handle.Result);
-
-                    dictionary.Add(key, value);
-                    OnComplete?.Invoke();
-                    break;
-
-                case AsyncOperationStatus.Failed:
-                    break;
-
-                default:
-                    break;
-            }
-        };
     }
 }
 

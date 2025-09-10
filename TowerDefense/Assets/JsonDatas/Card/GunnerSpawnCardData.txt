@@ -1,0 +1,1 @@
+{"$type":"CardData, Assembly-CSharp","nameToSpawn":0,"areaData":{"$type":"AreaData, Assembly-CSharp","rowSize":2,"colSize":2,"pivot":{"$type":"UnityEngine.Vector2Int, UnityEngine.CoreModule","x":0,"y":0,"magnitude":0.0,"sqrMagnitude":0}},"cardName":"슈터","cardDescription":"원거리에서 총을 난사하여 적에게 피해를 입히는 유닛입니다."}

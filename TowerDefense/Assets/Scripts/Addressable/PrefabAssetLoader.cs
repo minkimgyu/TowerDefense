@@ -6,26 +6,12 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using System;
 
-//public class EffectAssetLoader : MultiplePrafabAssetLoader<Effect.Name, Effect>
-//{
-//    public EffectAssetLoader(AddressableLoader.Label label, Action<Dictionary<Effect.Name, Effect>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
-//    {
-//    }
-//}
-
-//public class DotAssetLoader : MultiplePrafabAssetLoader<Dot.Name, Dot>
-//{
-//    public DotAssetLoader(AddressableLoader.Label label, Action<Dictionary<Dot.Name, Dot>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
-//    {
-//    }
-//}
-
-//public class SpawnableUIAssetLoader : MultiplePrafabAssetLoader<SpawnableUI.Name, SpawnableUI>
-//{
-//    public SpawnableUIAssetLoader(AddressableLoader.Label label, Action<Dictionary<SpawnableUI.Name, SpawnableUI>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
-//    {
-//    }
-//}
+public class SpawnableUIAssetLoader : MultiplePrafabAssetLoader<ISpawnableUI.Name, ISpawnableUI>
+{
+    public SpawnableUIAssetLoader(AddressableLoader.Label label, Action<Dictionary<ISpawnableUI.Name, ISpawnableUI>, AddressableLoader.Label> OnComplete) : base(label, OnComplete)
+    {
+    }
+}
 
 abstract public class MultiplePrafabAssetLoader<Key, Value> : MultipleAssetLoader<Key, Value, GameObject>
 {

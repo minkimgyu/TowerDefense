@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 6c6c1c53e89b1ba448ee2d28025e46ef
+  m_DefaultGroup: 8be30c4dba2f86e4ea2ebee21fc8bb66
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -44,7 +44,9 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 11400000, guid: 42992ff7f624ed14280bbe3dc336fe2b, type: 2}
+  - {fileID: 11400000, guid: 64ed6a76beaeb0949b82606299dab9f6, type: 2}
+  - {fileID: 11400000, guid: a8ff1afd4186473449a48e333c3a9aab, type: 2}
+  - {fileID: 11400000, guid: 32ffc408505fd9743a022de82cc65f34, type: 2}
   - {fileID: 11400000, guid: 17787e27ab6bfda4f84ac3df8d92bc42, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
@@ -87,6 +89,9 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - CardJsonData
+    - SpawnableUI
+    - CardIconSprite
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 345e85e7e779ce7499c83b44757cfc5b, type: 2}

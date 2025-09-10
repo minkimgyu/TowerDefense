@@ -30,9 +30,6 @@ namespace FlowField
 
         Node[,] _nodes; // r, c
 
-        Vector2 _topLeftWorldPoint;
-        Vector2Int _topLeftLocalPoint;
-
         Grid _grid;
         Dictionary<Vector2Int, bool> _isWall = new Dictionary<Vector2Int, bool>();
 

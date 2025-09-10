@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace FlowField
 {
-    public class FlowField : MonoBehaviour
+    public class FlowField
     {
         GridComponent _gridComponent;
 
-        public void Initialize(GridComponent gridComponent)
+        public FlowField(GridComponent gridComponent)
         {
             _gridComponent = gridComponent;
             _heap = new Heap<Node>(1000);

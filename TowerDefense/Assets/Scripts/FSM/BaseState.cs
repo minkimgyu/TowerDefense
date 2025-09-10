@@ -9,8 +9,11 @@ abstract public class BaseState<T>
         _fsm = fsm; 
     }
 
-    public virtual void OnStateEnter(AreaData data) { }
+    public virtual void OnStateEnter(CardData data) { }
     public virtual void OnStateEnter() { }
     public virtual void OnStateUpdate() { }
     public virtual void OnStateExit() { }
+
+    public virtual void OnCardDragStart(CardData areaData) { }
+    public virtual void OnCardDragEnd(bool canPlant) { }
 }

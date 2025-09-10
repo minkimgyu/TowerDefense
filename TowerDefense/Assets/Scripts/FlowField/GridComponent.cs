@@ -23,9 +23,8 @@ namespace FlowField
 
     public class GridComponent : MonoBehaviour
     {
-        GridGenerator _gridGenerator;
-        FlowField _flowField;
-        GridDrawer _gridDrawer;
+        [SerializeField] GridGenerator _gridGenerator;
+        [SerializeField] GridDrawer _gridDrawer;
 
         Node[,] _nodes; // r, c
 
@@ -296,12 +295,8 @@ namespace FlowField
             return nearNodeData;
         }
 
-        public void Initialize(GridGenerator gridGenerator, GridDrawer gridDrawer, FlowField dijkstra)
+        public void Initialize()
         {
-            _gridGenerator = gridGenerator;
-            _gridDrawer = gridDrawer;
-            _flowField = dijkstra;
-
             _nodes = _gridGenerator.CreateGrid();
 
             _grid = new Grid(_nodes.GetLength(0), _nodes.GetLength(1));
@@ -320,7 +315,6 @@ namespace FlowField
                     _nodes[i, j].NearNodes = ReturnNearNodes(new Vector2Int(i, j));
                 }
             }
-            _flowField.Initialize(this);
         }
     }
 }

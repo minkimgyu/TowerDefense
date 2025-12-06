@@ -2,9 +2,9 @@
 
 Unity를 사용하여 개발 중인 모바일 3D 디펜스 게임입니다.
 
-<img width="292/2" height="640/2" src="https://github.com/user-attachments/assets/ebea32cd-938e-47b6-b300-797cb4d64985" alt="Angles Game Screenshot"/>
-<img width="288/2" height="640/2" src="https://github.com/user-attachments/assets/b2d7d8cc-1c5a-452a-be08-e6fe7a265c98" alt="Angles Game Screenshot"/>
-<img width="264/2" height="640/2" src="https://github.com/user-attachments/assets/456dc5d1-8967-4478-af32-b6f38b992cb1" alt="Angles Game Screenshot"/>
+<img width="292/3" height="640/3" src="https://github.com/user-attachments/assets/ebea32cd-938e-47b6-b300-797cb4d64985" alt="Angles Game Screenshot"/>
+<img width="288/3" height="640/3" src="https://github.com/user-attachments/assets/b2d7d8cc-1c5a-452a-be08-e6fe7a265c98" alt="Angles Game Screenshot"/>
+<img width="264/3" height="640/3" src="https://github.com/user-attachments/assets/456dc5d1-8967-4478-af32-b6f38b992cb1" alt="Angles Game Screenshot"/>
 
 ## 📆 개발 기간
 2025년 9월 ~ 
